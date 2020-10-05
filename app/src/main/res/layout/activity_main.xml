@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_entry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etxt_main_string"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/textbox_shape_round"
+            android:drawableLeft="@drawable/ic_format_align_justify_white_24dp"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Enter the main string"
+            android:inputType="textMultiLine"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/colorPink" />
+
+        <EditText
+            android:id="@+id/etxt_pattern_string"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textbox_shape_round"
+            android:drawableLeft="@drawable/ic_title_white_24dp"
+            android:drawablePadding="10dp"
+            android:hint="Enter the pattern string"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/colorPink" />
+
+        <Button
+            android:id="@+id/btn_Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="15dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorControl"
+            android:backgroundTintMode="multiply"
+            android:drawableRight="@drawable/ic_search_white_24dp"
+            android:text="Search"
+            android:layout_gravity="center"
+            android:textColor="@android:color/white"></Button>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_entry">
+
+        <LinearLayout
+            android:id="@+id/Layout_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_margin="10dp"
+                android:hint="Result will appear here.."
+                android:paddingBottom="10dp"
+                android:textColor="@android:color/white"
+                android:textColorHint="@color/colorPink"></TextView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
